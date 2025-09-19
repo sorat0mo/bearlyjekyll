@@ -1,0 +1,16 @@
+<ul class="image-gallery">
+  {% assign gallery_extensions = "png,jpg,jpeg,gif,webp,svg" | split: "," %}
+  {% for file in site.static_files %}
+    {% assign file_ext = file.extname | remove: "." | downcase %}
+    {% if file.path contains include.folder and gallery_extensions contains file_ext %}
+      {% assign filename = file.path | split: "/" | last | replace: file.extname, "" %}
+      <li>
+        <a href="{{ file.path | relative_url }}" title="{{ filename }}">
+          <img src="{{ file.path | relative_url }}"
+               alt="{{ filename }}" class="figure"
+               title="{{ filename }}" />
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

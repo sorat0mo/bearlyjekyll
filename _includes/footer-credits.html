@@ -1,0 +1,7 @@
+{% if site.orig_theme_author %}<div class="footer-credits">
+    <i><a href="https://knhash.in/jekyllBear" target="_blank" rel="noopener noreferrer">jekyllBear</a> by <a href="https://knhash.in" target="_blank" rel="noopener noreferrer">knhash</a></i>
+  </div>{% endif %}
+  <div class="footer-author">
+    <span><i><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a> by <a {% if site.author_url %}href="{{ site.author_url }}" target="_blank" rel="noopener noreferrer"{% else %}href="{{ site.url }}"{% endif %}>{{ site.author }}</a>.</span>
+    <span>{% if site.copyright_url %}<a href="{{ site.copyright_url}}" target="_blank" rel="noopener noreferrer">{% endif %}{{ site.copyright }}{% if site.copyright_url %}</a>{% endif %}</i></span>
+  </div>
