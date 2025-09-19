@@ -97,4 +97,4 @@ defaults:
       type: "page"
       layout: page
 
-exclude: ["README.md", "LICENSE.txt"]
+exclude: [vendor, "README.md", "LICENSE.txt", "bearlyjekyll.gemspec"]
